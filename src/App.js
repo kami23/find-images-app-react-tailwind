@@ -5,6 +5,7 @@ import SearchedField from "./components/SearchedField";
 import Images from "./components/Images";
 import useAxios from "./hooks/useAxios";
 import OptionBar from "./components/OptionBar";
+import Slider from "./components/Slider";
 
 // Create ContexT
 export const ImageContext = createContext();
@@ -14,6 +15,8 @@ function App() {
   const { response, isLoading, error, fetchData } = useAxios(
     `search/photos?page=1&query=cats&client_id=${process.env.REACT_APP_ACCESS_KEY}`
   );
+  console.log(response);
+
   const value = {
     response,
     isLoading,
@@ -27,7 +30,8 @@ function App() {
       <Jumbotron>
         <SearchedField />
       </Jumbotron>
-      <Images />
+      {/* <Images /> */}
+      <Slider />
     </ImageContext.Provider>
   );
 }
