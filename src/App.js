@@ -6,6 +6,7 @@ import Images from "./components/Images";
 import useAxios from "./hooks/useAxios";
 import OptionBar from "./components/OptionBar";
 import Slider from "./components/Slider";
+import Result from "./components/Result";
 
 // Create ContexT
 export const ImageContext = createContext();
@@ -30,6 +31,7 @@ function App() {
       <Jumbotron>
         <SearchedField />
       </Jumbotron>
+      <Result />
       {/* <Images /> */}
       <Slider />
     </ImageContext.Provider>
